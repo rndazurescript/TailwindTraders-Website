@@ -1,35 +1,35 @@
 
-using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
+//using MongoDB.Bson;
+//using MongoDB.Bson.Serialization.Attributes;
 using Newtonsoft.Json;
 
 namespace Tailwind.Traders.Web.Standalone.Data
 {
     public class ShoppingCartItemDocument
     {
-        [BsonId]
+        //[BsonId]
         [JsonIgnore]
-        public ObjectId _id { get; set; }
+        public long _id { get; set; }
         
-        [BsonElement("productId")]
+        //[BsonElement("productId")]
         public int Id { get; set; }
 
-        [BsonElement("email")]
+        //[BsonElement("email")]
         public string Email { get; set; }
 
-        [BsonElement("imageUrl")]
+        //[BsonElement("imageUrl")]
         public string ImageUrl { get; set; }
 
-        [BsonElement("name")]
+        //[BsonElement("name")]
         public string Name { get; set; }
 
-        [BsonElement("price")]
+        //[BsonElement("price")]
         public decimal Price { get; set; }
 
-        [BsonElement("qty")]
+        //[BsonElement("qty")]
         public int Qty { get; set; }
 
-        [BsonElement("id")]
+        //[BsonElement("id")]
         [JsonProperty("_cdbid")]
         public string Guid { get; set; }
     }
